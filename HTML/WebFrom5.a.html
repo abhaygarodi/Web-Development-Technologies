@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Table</title>
+</head>
+<body>
+
+<h1>Enter Your Information</h1>
+
+<form action="" method="POST">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>John Doe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name1" placeholder="Enter name" /></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" name="sex1" value="Male"> Male
+                    <input type="radio" name="sex1" value="Female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Eye Color</td>
+                <td>
+                    <select name="eye_color1">
+                        <option value="Blue">Blue</option>
+                        <option value="Green">Green</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Hazel">Hazel</option>
+                        <option value="Gray">Gray</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check All That Apply</td>
+                <td>
+                    <input type="checkbox" name="check1_1" value="Option 1"> Oveal 6 Fit tell<br>
+                    <input type="checkbox" name="check1_2" value="Option 2"> Over 200 Pound
+                </td>
+            </tr>
+            <tr>
+                <td>Athletic Ability Description</td>
+                <td><textarea name="athletic_ability1" placeholder="Describe athletic ability"></textarea></td>
+            </tr>
+            <td colspan="2" align="center"><br>
+    <button type="submit" colspna = "2">Enter My Information</button></td>
+        </tbody>
+        
+    </table>
+
+    
+</form>
+
+</body>
+</html>

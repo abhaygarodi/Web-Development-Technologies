@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login Form</title>
+</head>
+<body>
+    <form>
+        <!-- Username -->
+        Username: 
+        <input type="text" name="username"><br><br>
+
+        <!-- Password -->
+        Password: 
+        <input type="password" name="password"><br><br>
+
+        <!-- City of Employment -->
+        City of Employment: 
+        <input type="text" name="city"><br><br>
+
+        <!-- Web Server Selection -->
+        Web Server: 
+        <select name="webserver">
+            <option value="ip">IP Address</option>
+            <option value="another">Another</option>
+        </select>
+        <br><br>
+
+        <!-- Role Selection -->
+        Please specify your role:<br>
+        <input type="checkbox" name="role" value="admin"> Admin<br>
+        <input type="checkbox" name="role" value="engineer"> Engineer<br>
+        <input type="checkbox" name="role" value="manager"> Manager<br>
+        <input type="checkbox" name="role" value="guest"> Guest<br><br>
+
+        <!-- Single Sign-on Options -->
+        Single Sign-on to the following:<br>
+        <input type="checkbox" name="sso" value="mail"> Mail<br>
+        <input type="checkbox" name="sso" value="payroll"> Payroll<br>
+        <input type="checkbox" name="sso" value="selfservice"> Self-Service<br><br>
+
+        <!-- Buttons -->
+        <button type="submit">Login</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
