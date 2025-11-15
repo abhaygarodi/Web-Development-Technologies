@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    margin: 5px;
+    padding: 4px;
+    background-color: rgb(255, 255, 255);
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+   background-color: rgb(46, 84, 207);
+   width: 200px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: medium;
+   color: aliceblue;
+   
+}
+::placeholder{
+    background-color: rgb(219, 226, 232);
+}
+input{
+    width: 200px;
+}
+ 
+label {
+     
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
