@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat Message</title>
+    <script>
+         var numRepetitions = parseInt(prompt("Enter the repeation "))
+        var numRepetitions = parseInt(prompt("Please enter a number of times to repeat the message:"), 10);
+        var userMessage = prompt("Please enter the message you want to repeat:");
+        if (isNaN(numRepetitions) || numRepetitions <= 0) {
+            alert("Please enter a valid positive number.");
+        } else {
+        
+            for (var i = 0; i < numRepetitions; i++) {
+                console.log(userMessage);
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

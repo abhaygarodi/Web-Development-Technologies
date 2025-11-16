@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- accept two number and a operator like +-*/ from user and perfrom the appropriate operation indicated by the operator use switch case -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        var num1 = parseFloat(prompt("Enter the first number"));
+        var num2 = parseFloat(prompt("Enter the secound number"));
+        var operator = prompt("Enter the operator(+-*/)");
+        var result;
+        switch(operator){
+            case "+": 
+             result= num1-num2;
+                break;
+            case "-": 
+             result= num1+num2;
+                break;
+            case "*": 
+             result= num1*num2;
+                break;
+            case "/":
+                 result=num1/num2;
+                break;
+            
+        }
+        console.log("Output of the "+result)
+    </script>
+</head>
+<body>
+</body>
+</html>
