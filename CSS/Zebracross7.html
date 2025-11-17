@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zebra Table Effect</title>
+<style>
+  /* Define two classes for alternating rows */
+  .row1 {
+    background-color: #e0f7fa; /* light cyan */
+  }
+  .row2 {
+    background-color: #b2ebf2; /* slightly darker cyan */
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #00796b;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Department</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="row1"><td>Jane Smith</td><td>Marketing</td><td>$95,000</td></tr>
+    <tr class="row2"><td>John Smith</td><td>Technology</td><td>$90,000</td></tr>
+    <tr class="row1"><td>Brian Adam</td><td>Sales</td><td>$72,000</td></tr>
+    <tr class="row2"><td>Mary Jones</td><td>Support</td><td>$60,000</td></tr>
+    <tr class="row1"><td><em>Michael Jefferson</em></td><td><em>Technology</em></td><td><em>$85,000</em></td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>
