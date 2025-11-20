@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Power Function (x^y) without Math.pow</h2>
+
+Enter X: <input id="x"><br><br>
+Enter Y: <input id="y"><br><br>
+
+<button onclick="calculatePow()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+function pow(x, y) {
+    let result = 1;
+    for (let i = 1; i <= y; i++) {
+        result *= x;
+    }
+    return result;
+}
+
+function calculatePow() {
+    let x = parseInt(document.getElementById("x").value);
+    let y = parseInt(document.getElementById("y").value);
+    document.getElementById("result").innerHTML = "Result = " + pow(x, y);
+}
+</script>
+
+</body>
+</html>

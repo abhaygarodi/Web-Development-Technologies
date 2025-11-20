@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cmi.js"></script>
+    <script>
+        function inchesToCm(inches) {
+            const cmPerInch = 2.54;
+            const result = inches * cmPerInch;
+            return result;
+        }
+
+        function printInchesToCm(inches, outputElementId) {
+            const cm = inchesToCm(Number(inches));
+            const text = `${inches} inch(es) = ${cm} cm`;
+            if (outputElementId) {
+                const el = document.getElementById(outputElementId);
+                if (el) el.innerText = text;
+                else console.log(text);
+            } else {
+                console.log(text);
+            }
+        }
+
+        window.inchesToCm = inchesToCm;
+        window.printInchesToCm = printInchesToCm;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const inchesInput = document.getElementById('inches');
+            const convertBtn = document.getElementById('convertBtn');
+
+            // Initial conversion on page load
+            printInchesToCm(inchesInput.value, 'result');
+
+            // Add event listener to the convert button
+            convertBtn.addEventListener('click', function () {
+                const inches = inchesInput.value;
+                printInchesToCm(inches, 'result');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Convert inches to centimeters</h2>
+    <label for="inches">Enter inches:</label>
+    <input id="inches" type="number" step="any" value="1"/>
+    <button id="convertBtn">Convert</button>
+    <p id="result">Result will appear here.</p>
+</body>
+</html>

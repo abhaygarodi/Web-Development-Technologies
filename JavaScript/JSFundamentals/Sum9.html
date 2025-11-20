@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sum & Average of 3 Numbers</h2>
+
+Number 1: <input id="n1"><br><br>
+Number 2: <input id="n2"><br><br>
+Number 3: <input id="n3"><br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="output"></h3>
+
+<script>
+function calculate() {
+    let a = parseFloat(document.getElementById("n1").value);
+    let b = parseFloat(document.getElementById("n2").value);
+    let c = parseFloat(document.getElementById("n3").value);
+
+    let sum = a + b + c;
+    let avg = sum / 3;
+
+    document.getElementById("output").innerHTML =
+        "Sum = " + sum + "<br>Average = " + avg;
+}
+</script>
+
+</body>
+</html>

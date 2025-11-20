@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sum of Squares of Even Numbers up to N</h2>
+
+Enter N: <input id="num"><br><br>
+
+<button onclick="findSum()">Calculate</button>
+
+<h3 id="res"></h3>
+
+<script>
+function sumOfSquares(N) {
+    let sum = 0;
+    for (let i = 2; i <= N; i += 2) {
+        sum += i * i;
+    }
+    return sum;
+}
+
+function findSum() {
+    let N = parseInt(document.getElementById("num").value);
+    document.getElementById("res").innerHTML =
+        "Sum of squares = " + sumOfSquares(N);
+}
+</script>
+
+</body>
+</html>
