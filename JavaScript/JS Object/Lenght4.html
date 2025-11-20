@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Words Starting with A/a & Even Length</h2>
+
+<input id="word" placeholder="Enter a word">
+<button onclick="addWord()">Add</button>
+<button onclick="showWords()">Show Result</button>
+
+<h3 id="result"></h3>
+
+<script>
+let words = [];
+
+function addWord() {
+    if (words.length < 10) {
+        words.push(document.getElementById("word").value);
+        document.getElementById("word").value = "";
+    }
+}
+
+function showWords() {
+    let output = words.filter(w => w.length % 2 === 0 && (w.startsWith("A") || w.startsWith("a")));
+    document.getElementById("result").innerHTML = output.join("<br>");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Rectangle Objects Info</h2>
+
+<script>
+class Rectangle {
+    constructor(length, breadth) {
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    area() { return this.length * this.breadth; }
+
+    perimeter() { return 2 * (this.length + this.breadth); }
+
+    show() {
+        document.write(
+            `Length: ${this.length}, Breadth: ${this.breadth}, ` +
+            `Area: ${this.area()}, Perimeter: ${this.perimeter()}<br>`
+        );
+    }
+}
+
+let rects = [
+    new Rectangle(10, 5),
+    new Rectangle(7, 4),
+    new Rectangle(12, 8),
+    new Rectangle(6, 3),
+    new Rectangle(15, 10)
+];
+
+rects.forEach(r => r.show());
+</script>
+
+</body>
+</html>

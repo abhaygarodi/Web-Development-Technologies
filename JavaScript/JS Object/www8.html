@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Count URLs starting with www</h2>
+
+<script>
+let sites = [
+    "www.google.com", 
+    "www.msn.com", 
+    "www.amazon.co.in",
+    "in.answers.yahoo.com",
+    "en.m.wikipedia.com",
+    "codehs.gitbooks.io",
+    "www.coderanch.com"
+];
+
+let count = sites.filter(s => s.startsWith("www")).length;
+
+document.write("Total sites starting with www: " + count);
+</script>
+
+</body>
+</html>

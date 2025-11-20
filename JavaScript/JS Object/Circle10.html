@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Rectangle & Circle Details</h2>
+
+<script>
+class Rectangle {
+    constructor(length, width) {
+        this.length = length;
+        this.width = width;
+    }
+    area() { return this.length * this.width; }
+    perimeter() { return 2 * (this.length + this.width); }
+}
+
+class Circle {
+    constructor(radius) {
+        this.radius = radius;
+    }
+    area() { return Math.PI * this.radius * this.radius; }
+    circumference() { return 2 * Math.PI * this.radius; }
+}
+
+let r = new Rectangle(10, 5);
+let c = new Circle(7);
+
+document.write(
+    `Rectangle → L=${r.length}, W=${r.width}, Area=${r.area()}, Perimeter=${r.perimeter()}<br>`
+);
+
+document.write(
+    `Circle → Radius=${c.radius}, Area=${c.area().toFixed(2)}, Circumference=${c.circumference().toFixed(2)}`
+);
+</script>
+
+</body>
+</html>

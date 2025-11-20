@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Numbers Above Average</h2>
+
+<script>
+let numbers = [10, 20, 30, 5, 40, 15, 50, 25, 35, 45];
+
+let sum = numbers.reduce((a,b)=>a+b,0);
+let avg = sum / numbers.length;
+
+let count = numbers.filter(n => n > avg).length;
+
+document.write("Average = " + avg + "<br>");
+document.write("Numbers above average: " + count);
+</script>
+
+</body>
+</html>

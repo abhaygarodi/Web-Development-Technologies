@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student & Graduate Student</h2>
+
+<script>
+class Student {
+    constructor(name, course) {
+        this.name = name;
+        this.course = course;
+    }
+    getDetails() {
+        return `Name: ${this.name}, Course: ${this.course}`;
+    }
+}
+
+class GraduateStudent extends Student {
+    constructor(name, course, gpa) {
+        super(name, course);
+        this.gpa = gpa;
+    }
+    getDetails() {
+        return `Name: ${this.name}, Course: ${this.course}, GPA: ${this.gpa}`;
+    }
+}
+
+let gs = new GraduateStudent("Abhay", "Java Full Stack", 8.9);
+
+document.write(gs.getDetails());
+</script>
+
+</body>
+</html>

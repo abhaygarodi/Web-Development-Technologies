@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Employee Table</h2>
+
+<table border="1" cellpadding="10">
+    <thead>
+        <tr><th>ID</th><th>Name</th><th>Salary</th></tr>
+    </thead>
+    <tbody id="empTable"></tbody>
+</table>
+
+<script>
+let employees = [
+    {id: 101, name: "Rahul", salary: 50000},
+    {id: 102, name: "Seema", salary: 60000},
+    {id: 103, name: "Amit", salary: 45000},
+    {id: 104, name: "Neha", salary: 70000}
+];
+
+employees.forEach(e => {
+    document.getElementById("empTable").innerHTML +=
+        `<tr><td>${e.id}</td><td>${e.name}</td><td>${e.salary}</td></tr>`;
+});
+</script>
+
+</body>
+</html>
