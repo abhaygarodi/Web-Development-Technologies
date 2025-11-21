@@ -1,0 +1,4 @@
+Bookid|bookname|author|Sellingprice|finalprice
+1001|Core Java|Cay Horstman|500|450
+1002|JavaScript Guide|David Flanagan|600|540
+1003|NodeJS|Andrew Mead|550|495
