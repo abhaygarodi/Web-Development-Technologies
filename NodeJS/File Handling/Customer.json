@@ -1,0 +1,20 @@
+[
+    {
+        "custname": "Anil Patil",
+        "address": "sbd 123",
+        "phno": "8877669988",
+        "rating": 8
+    },
+    {
+        "custname": "Anita Kulkarni",
+        "address": "A102, Highstreet",
+        "phno": "99675456",
+        "rating": 7
+    },
+    {
+        "custname": "Kavita Menon",
+        "address": "88203, Pune",
+        "phno": "123456789",
+        "rating": 9
+    }
+]
