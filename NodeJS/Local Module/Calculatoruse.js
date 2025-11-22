@@ -1,0 +1,6 @@
+var mod = require("./Calculator")
+    console.log(mod.add(10,20))
+    console.log(mod.sub(10,20))
+    console.log(mod.mul(10,20))
+    console.log(mod.div(10,20))
+    console.log(mod.modulus(10,20))
