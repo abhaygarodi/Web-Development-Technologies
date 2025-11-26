@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sum of Digits</h2>
+
+Enter number (less than 3000):  
+<input id="num"><br><br>
+
+<button onclick="findSum()">Find Sum</button>
+
+<h3 id="out"></h3>
+
+<script>
+function findSum() {
+    let n = parseInt(document.getElementById("num").value);
+
+    if (n >= 3000) {
+        document.getElementById("out").innerHTML = "Entered number is out of range";
+        return;
+    }
+
+    let sum = 0, temp = n;
+
+    while (temp > 0) {
+        sum += temp % 10;
+        temp = Math.floor(temp / 10);
+    }
+
+    document.getElementById("out").innerHTML = "Sum of digits = " + sum;
+}
+</script>
+
+</body>
+</html>

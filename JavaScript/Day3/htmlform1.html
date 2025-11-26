@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <script>
+        function area(){
+                var r = parseFloat(document.getElementById("r").value);
+                 document.getElementById("area").value = 3.14 * r * r;
+                   
+        }
+        function cir(){
+                  var r = parseFloat(document.getElementById("r").value);
+                 document.getElementById("cir").value = 2 * 3.14 * r ;
+                   
+        }
+        
+       
+    </script>
+ </head>
+ <body>
+     
+    Radius: <input type="text" onclick="area(),cir() " id="r"><br><br>
+    <input type="button" value="display" onclick="area(),cir() "><br><br>
+    Area: <input id = "area"  style="margin-left: 70px; border: 0px;" >  <br>
+    Circumference: <input id = "cir" style="margin-left: 70px; border: 0px;" readonly><br>
+  
+ </body>
+ </html>

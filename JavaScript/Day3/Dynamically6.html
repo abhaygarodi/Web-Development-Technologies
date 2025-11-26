@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Members of my Group are</h2>
+
+<textarea id="data" rows="5" cols="40" placeholder="Enter names separated by comma"></textarea><br><br>
+
+<button onclick="showNames()">Show Names</button>
+
+<h3 id="result"></h3>
+
+<script>
+function showNames() {
+    let text = document.getElementById("data").value;
+    let arr = text.split(",").map(x => x.trim());
+    
+    let output = "<ul>";
+    arr.forEach(n => output += "<li>" + n + "</li>");
+    output += "</ul>";
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+</body>
+</html>

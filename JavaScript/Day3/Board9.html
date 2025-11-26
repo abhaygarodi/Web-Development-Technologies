@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+    table, td, th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>Registration form</h2>
+
+<form>
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label>Profession:</label>
+    <input type="text" id="profession"><br><br>
+
+    <label>Email:</label>
+    <input type="email" id="email"><br><br>
+
+    <label>UserName:</label>
+    <input type="text" id="uname"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="pass"><br><br>
+
+    <label>Confirm Password:</label>
+    <input type="password" id="cpass"><br><br>
+
+    <button type="button" onclick="addDetails()">Register</button>
+</form>
+
+<h3>Registered Users:</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Profession</th>
+            <th>Email</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table>
+
+<script>
+let users = [];
+
+function addDetails() {
+    let name = document.getElementById("name").value;
+    let profession = document.getElementById("profession").value;
+    let email = document.getElementById("email").value;
+    let uname = document.getElementById("uname").value;
+    let pass = document.getElementById("pass").value;
+    let cpass = document.getElementById("cpass").value;
+
+    if (pass !== cpass) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    let obj = {
+        name, profession, email, uname
+    };
+
+    users.push(obj);
+    display();
+}
+
+function display() {
+    document.getElementById("tbody").innerHTML = "";
+
+    users.forEach(u => {
+        document.getElementById("tbody").innerHTML +=
+            `<tr>
+                <td>${u.name}</td>
+                <td>${u.profession}</td>
+                <td>${u.email}</td>
+                <td>${u.uname}</td>
+            </tr>`;
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <script>
+        function start() {
+            var startNum = parseInt(document.getElementById("start").value);
+            var endNum = parseInt(document.getElementById("end").value);
+            var multiplier = parseInt(document.getElementById("multiply").value);
+
+            var output = "";
+            for (var i = startNum; i <= endNum; i++) {
+                output += i + " times " + multiplier + " = " + (i * multiplier) + "\n";
+            }
+
+            document.getElementById("area").value = output;
+        }
+
+        function reset() {
+            document.getElementById("start").value = "";
+            document.getElementById("end").value = "";
+            document.getElementById("multiply").value = "";
+            document.getElementById("area").value = "";
+        }
+    </script>
+</head>
+<body>
+    <center>
+        Start Number: <input type="number" id="start"> 
+        End Number: <input type="number" id="end"> 
+        Multiply By: <input type="number" id="multiply"><br><br> 
+        
+        <button type="button" onclick="start()">Times Table</button> <br><br>
+        <button type="button" onclick="reset()">Reset</button><br><br>
+        
+        <textarea id="area" rows="10" cols="30" readonly></textarea>
+    </center>
+</body>
+</html>

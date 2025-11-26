@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Welcome to JavaScript</h2>
+
+<table border="1" cellpadding="10">
+    <tr><th>Name</th><th>Account No</th><th>Balance</th></tr>
+    <tbody id="tbody"></tbody>
+</table>
+
+<script>
+let accounts = [
+    {name: "Rahul", accno: "12345", balance: 5000},
+    {name: "Sneha", accno: "23456", balance: 12000},
+    {name: "Amit", accno: "34567", balance: 8500},
+    {name: "Neha", accno: "45678", balance: 15000},
+    {name: "Deepak", accno: "56789", balance: 9000}
+];
+
+accounts.forEach(a => {
+    document.getElementById("tbody").innerHTML +=
+        `<tr><td>${a.name}</td><td>${a.accno}</td><td>${a.balance}</td></tr>`;
+});
+</script>
+
+</body>
+</html>

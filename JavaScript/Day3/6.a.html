@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Enter Your Details</h2>
+
+Name: <input id="name"><br><br>
+Age: <input id="age"><br><br>
+Email: <input id="email"><br><br>
+City: <input id="city"><br><br>
+
+<button onclick="fill()">Show Details</button>
+
+<h3 id="info"></h3>
+
+<script>
+function fill() {
+    let name = document.getElementById("name").value;
+    let age  = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
+    let city = document.getElementById("city").value;
+
+    let lucky = Math.floor(Math.random() * 100) + 1;
+
+    let details = `
+        <b>Name:</b> ${name}<br>
+        <b>Age:</b> ${age}<br>
+        <b>Email:</b> ${email}<br>
+        <b>City:</b> ${city}<br>
+        <b>Lucky Number:</b> ${lucky}
+    `;
+
+    document.getElementById("info").innerHTML = details;
+}
+</script>
+
+</body>
+</html>
