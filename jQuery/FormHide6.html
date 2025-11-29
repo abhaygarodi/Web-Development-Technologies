@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+$(document).ready(function(){
+    $("input").css("margin","10px");
+   $("input").hide("input");
+
+})
+    </script>
+    <style>
+        body, fieldset{
+            margin: 20px;
+            border: 2px solid black;
+            background-color: blanchedalmond;
+            
+        }
+        input{
+            text-emphasis: auto;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <center>
+            <fieldset>
+            <legend>Form registration</legend>
+         name: <input id="name" type="text"><br>
+         rollno: <input id="rollno" type="number"><br>
+         Address: <input id="address" type="textarea"><br>
+         Gender:<input id="Gender" type="radio">Male <br>
+       <input id="Gender" type="radio" >   Female <br>
+         Age: <input id="age" type="number"><br>
+         <button id="button">Submit</button>
+        </center>
+</fieldset>
+    </form>
+</body>
+</html>

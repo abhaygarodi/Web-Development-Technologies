@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#target").css("background-color","lightgray");
+            $("body").css("background-color","lightblue");
+            $("button").css("background-color","orange");
+           $("#target span").text("The text has been changed!");
+
+        });
+    </script>
+</head>     
+<body>
+   <center>
+<div id="target">
+  <span>change me!</span>
+</div>
+
+    <button>(change me!)</button>
+    </center></body>
+</body>
+</html>

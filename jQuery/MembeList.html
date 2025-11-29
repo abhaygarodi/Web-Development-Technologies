@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h3>Members of my Group are</h3>
+<ol id="memberList"></ol>
+
+<script>
+    $(document).ready(function () {
+        const members = ["John", "Steve", "Ben", "Damon", "Ian"];
+
+        $.each(members, function (index, name) {
+            $("#memberList").append("<li>" + name + "</li>");
+        });
+    });
+</script>
+
+</body>
+</html>

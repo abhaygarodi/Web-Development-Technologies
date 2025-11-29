@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Details - jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h2>Add Person</h2>
+
+<label>Name:</label>
+<input type="text" id="name"><br><br>
+
+<label>Age:</label>
+<input type="number" id="age"><br><br>
+
+<label>Employed (true/false):</label>
+<input type="text" id="emp"><br><br>
+
+<button id="addBtn">Add</button>
+<button id="displayBtn">Display</button>
+
+<h3>Person List</h3>
+
+<table border="1" cellpadding="7" id="personTable">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Employed</th>
+    </tr>
+</table>
+
+<script>
+    let persons = [];
+
+    $("#addBtn").click(function () {
+        let obj = {
+            name: $("#name").val(),
+            age: $("#age").val(),
+            employed: $("#emp").val()
+        };
+
+        persons.push(obj);
+        alert("Person added!");
+    });
+
+    $("#displayBtn").click(function () {
+        $("#personTable").html(`
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Employed</th>
+            </tr>
+        `);
+
+        $.each(persons, function (i, person) {
+            $("#personTable").append(`
+                <tr>
+                    <td>${person.name}</td>
+                    <td>${person.age}</td>
+                    <td>${person.employed}</td>
+                </tr>
+            `);
+        });
+    });
+</script>
+
+</body>
+</html>
