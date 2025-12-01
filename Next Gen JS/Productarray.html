@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Assignment</title>
+</head>
+<body>
+ 
+
+<h2>2. Product Table (using forEach)</h2>
+<div id="tableDiv"></div>
+
+ 
+<script>
+ 
+ 
+const productArr = [
+    { pid: 1001, prodName: "Gaming headset", price: 3000, category: "Headset" },
+    { pid: 1002, prodName: "Toy Car", price: 500, category: "toys" },
+    { pid: 1003, prodName: "Keyboard", price: 1200, category: "Electronics" }
+];
+
+let table = `
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Category</th>
+    </tr>
+`;
+
+productArr.forEach(prod => {
+    table += `
+    <tr>
+        <td>${prod.pid}</td>
+        <td>${prod.prodName}</td>
+        <td>${prod.price}</td>
+        <td>${prod.category}</td>
+    </tr>
+    `;
+});
+
+table += "</table>";
+
+document.getElementById("tableDiv").innerHTML = table;
+
+
+
+
+</script>
+
+</body>
+</html>
