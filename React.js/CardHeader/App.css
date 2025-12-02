@@ -1,0 +1,13 @@
+.card {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 40%;
+  flex-wrap: wrap;
+  border-radius: 6px;
+  background: linear-gradient(#f1bca5, #dd7d23);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+}
